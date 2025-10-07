@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Tutorial</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+	<div class="container">
+	
+		<div class="row">
+		
+			<div class="col-12 col-lg-4 col-md-4">
+			
+				<button type="button" class="btn btn-primary" id="tclick">Show live toast</button>
+
+				<div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+				  <div id="display_t" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+					<div class="toast-header">
+					  <img src="..." class="rounded me-2" alt="...">
+					  <strong class="me-auto">Bootstrap</strong>
+					  <small>11 mins ago</small>
+					  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+					</div>
+					<div class="toast-body">
+					  Hello, world! This is a toast message.
+					  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+					</div>
+				  </div>
+				</div>
+			
+			</div>
+			
+			<div class="col-12 col-lg-4 col-md-4">
+			
+			</div>
+			
+			<div class="col-12 col-lg-4 col-md-4">
+			
+			</div>
+			
+		</div>
+	
+	</div>
+	
+	
+    <script src="js/bootstrap.bundle.min.js" ></script>
+	<script>
+		//const toastTrigger = document.getElementById('tclick')
+		const tbox = document.getElementById('display_t')
+
+		if (tbox) {
+		  const toastshow = bootstrap.Toast.getOrCreateInstance(tbox)
+		  //toastTrigger.addEventListener('click', () => {
+		  toastshow.show()
+		  //})
+		}
+	</script>
+  </body>
+</html>
